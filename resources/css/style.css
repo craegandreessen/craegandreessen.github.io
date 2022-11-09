@@ -1,0 +1,112 @@
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {    
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+header h1{
+    padding: 2%;
+    font-size: 3rem;
+    font-family: 'Sacramento', cursive;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10%;
+}
+
+nav p{
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+nav a{
+    color:brown;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: green;
+}
+
+main {
+    padding-top: 35px;
+    opacity: 0.9;
+  }
+  
+  .about {
+    display: flex;
+    height: 300px;
+    background-image: url("../images/banner-mesa.jpg");
+    padding-top: 2rem;
+  }
+  
+  .about .content {
+    padding: 1rem 1rem;
+    margin: auto;
+    background-color: rgba(255,255,255,0.5);;
+    width: 100%;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+  }
+
+  .content h2{
+    font-size: 2em;
+    padding-bottom: 0.5rem;
+  }
+
+  .content h4{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  #portfolio {
+    min-height: 500px;
+    margin: auto;
+    padding-top: 70px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+  }
+
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    padding: 10px;
+    height: auto;
+  }
+  
+  .item span {
+    padding: 5px;
+    min-width: 240px;
+    font-weight: bold;
+    text-align: center;
+  }
