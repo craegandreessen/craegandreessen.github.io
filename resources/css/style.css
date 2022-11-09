@@ -44,7 +44,7 @@ nav a:hover {
 }
 
 main {
-    padding-top: 35px;
+    padding-top: 2rem;
     opacity: 0.9;
   }
   
@@ -52,6 +52,7 @@ main {
     display: flex;
     background-image: url("../images/banner-mesa.jpg");
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   
   .about .content {
@@ -69,19 +70,21 @@ main {
   }
 
   .content h4{
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
   }
 
   #portfolio {
-    min-height: 500px;
+    padding-top: 4rem;
     margin: auto;
-    padding-top: 70px;
+
     text-align: center;
     font-family: 'Pacifico', cursive;
   }
 
   .items {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -93,6 +96,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
   }
   
   .item img {
