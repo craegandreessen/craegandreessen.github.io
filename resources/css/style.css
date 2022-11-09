@@ -50,7 +50,6 @@ main {
   
   .about {
     display: flex;
-    height: 300px;
     background-image: url("../images/banner-mesa.jpg");
     padding-top: 2rem;
   }
