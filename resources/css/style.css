@@ -1,116 +1,375 @@
-html {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+/* ========================================
+   PALOMA & SAGE - BRAND DESIGN SYSTEM
+   Rugged Refined Aesthetic
+   ======================================== */
+
+:root {
+  /* Primary Colors */
+  --color-charcoal: #2C3539;
+  --color-burnt-sienna: #A0522D;
+  --color-iron-rust: #8B4513;
+
+  /* Secondary Colors */
+  --color-stone-sage: #8F9779;
+  --color-sandstone: #D4C4A8;
+  --color-forest: #3D5A3C;
+
+  /* Accents */
+  --color-whiskey: #CC8833;
+  --color-gunmetal: #4A5459;
+
+  /* Neutrals */
+  --color-canvas: #F5F2ED;
+  --color-warm-white: #FDFBF7;
+  --color-deep-charcoal: #1A1E21;
+
+  /* Typography */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-accent: 'Bitter', serif;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
 }
 
-header {    
-    padding-top: 2%;
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+html {
+    font-size: 16px;
+    font-family: var(--font-body);
+    background-color: var(--color-canvas);
+    color: var(--color-charcoal);
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--color-canvas);
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+header {
+    padding: var(--space-md) var(--space-sm);
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--color-warm-white);
+    border-bottom: 3px solid var(--color-burnt-sienna);
 }
 
-header img{
+header img {
     display: block;
-    width: 50%;
-    margin: auto;
+    width: 120px;
+    height: auto;
+    margin: 0 auto var(--space-sm);
+    filter: contrast(1.1) brightness(0.9);
 }
 
-header h1{
-    padding: 2%;
-    font-size: 3rem;
-    font-family: 'Sacramento', cursive;
+header h1 {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-charcoal);
+    margin: var(--space-sm) 0;
+    font-weight: 400;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
-    margin: 0 10%;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+    flex-wrap: wrap;
 }
 
-nav p{
-    display: inline-block;
-    padding: 1rem;
-    font-size: 1.5rem;
+nav p {
+    margin: 0;
 }
 
-nav a{
-    color:brown;
+nav a {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-charcoal);
     text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: green;
+    color: var(--color-burnt-sienna);
+    border-bottom: 2px solid var(--color-burnt-sienna);
 }
 
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
 main {
-    padding-top: 2rem;
-    opacity: 0.9;
-  }
-  
-  .about {
+    padding-top: 0;
+}
+
+/* ========================================
+   ABOUT / HERO SECTION
+   ======================================== */
+
+.about {
     display: flex;
-    background-image: url("../images/banner-mesa.jpg");
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  
-  .about .content {
-    padding: 1rem 1rem;
-    margin: auto;
-    background-color: rgba(255,255,255,0.5);;
-    width: 100%;
+    background: linear-gradient(rgba(44, 53, 57, 0.7), rgba(44, 53, 57, 0.7)),
+                url("../images/banner-mesa.jpg") center center;
+    background-size: cover;
+    padding: var(--space-xl) var(--space-md);
+    min-height: 400px;
+    align-items: center;
+}
+
+.about .content {
+    padding: var(--space-lg) var(--space-md);
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: rgba(253, 251, 247, 0.95);
+    border: 3px solid var(--color-burnt-sienna);
+    border-radius: 2px;
     text-align: center;
-    font-family: 'Pacifico', cursive;
-  }
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
-  .content h2{
-    font-size: 2em;
-    padding-bottom: 0.5rem;
-  }
+.about .content h2 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
 
-  .content h4{
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-  }
+.about .content h4 {
+    font-family: var(--font-accent);
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: var(--color-gunmetal);
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-  #portfolio {
-    padding-top: 4rem;
-    margin: auto;
+/* ========================================
+   PORTFOLIO / SHOP SECTION
+   ======================================== */
 
+#portfolio {
+    padding: var(--space-xl) var(--space-md);
+    background-color: var(--color-warm-white);
+}
+
+#portfolio .content {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    font-family: 'Pacifico', cursive;
-  }
+}
 
-  .items {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+#portfolio h2 {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--color-charcoal);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-md);
+    position: relative;
+    display: inline-block;
+}
+
+#portfolio h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-burnt-sienna);
+}
+
+.items {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-md);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    font-family: 'Pacifico', cursive;
-  }
-  
-  .item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: stretch;
+    gap: var(--space-md);
+}
 
-  }
-  
-  .item img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    padding: 10px;
-    height: auto;
-  }
-  
-  .item span {
-    padding: 5px;
-    min-width: 240px;
-    font-weight: bold;
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-canvas);
+    border: 2px solid var(--color-sandstone);
+    padding: var(--space-md);
+    transition: all 0.3s ease;
+    min-width: 280px;
+    max-width: 320px;
+}
+
+.item:hover {
+    border-color: var(--color-burnt-sienna);
+    box-shadow: 0 6px 16px rgba(160, 82, 45, 0.2);
+    transform: translateY(-4px);
+}
+
+.item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    margin-bottom: var(--space-sm);
+    border: 1px solid var(--color-sandstone);
+}
+
+.item span {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-charcoal);
     text-align: center;
-  }
+    padding-top: var(--space-xs);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        gap: var(--space-sm);
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: var(--space-xs);
+    }
+
+    .about {
+        padding: var(--space-lg) var(--space-sm);
+        min-height: 300px;
+    }
+
+    .about .content {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .about .content h2 {
+        font-size: 2rem;
+    }
+
+    .about .content h4 {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+    #portfolio h2 {
+        font-size: 2.5rem;
+    }
+
+    .items {
+        gap: var(--space-sm);
+    }
+
+    .item {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+
+    .about .content h2 {
+        font-size: 1.75rem;
+    }
+
+    .about .content h4 {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    #portfolio h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.btn-primary {
+    display: inline-block;
+    background: var(--color-burnt-sienna);
+    color: var(--color-warm-white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-burnt-sienna);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--color-burnt-sienna);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-charcoal);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: var(--color-charcoal);
+    color: var(--color-warm-white);
+}
